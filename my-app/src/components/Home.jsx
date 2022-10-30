@@ -9,16 +9,16 @@ const Home = () => {
     const dispatch = useDispatch()
     const[length,setLength] = useState(20)
     useEffect(()=>{
-        getpostData(dispatch,length)
+        getpostData(dispatch,length)//will invoke the function in redux that will make an API call for Users list
     },[])
 
-    const {user} = useSelector((store)=>store)
+    const {user} = useSelector((store)=>store) //accessing the use list that is stored in redux store 
     // console.log(user)
 
 
     let wait
     const handleNext = ( ) =>{
-        if(wait)return
+        if(wait)return         //will check if there is anothe callback is registerd then it will not make the API call again
         setLength(length+20)
         
         wait = setTimeout(()=>{
@@ -29,19 +29,19 @@ const Home = () => {
     let Loading = ( ) =>{
       let loaderlength = [1,2,3,4,5,6,7,8,9,0]
       return loaderlength.map((ele)=><div className='LoadingDiv'>
-        <div>{'     '}</div>
-        <img src="https://tse2.mm.bing.net/th?id=OIP.CsFM2FJTwzsWaVC6q-NCUgHaHa&pid=Api&P=0" alt="" />
+        <div className='textPlaceholder'>{'     '}</div>
+        <div className="imagePlaceholder"></div>
       </div>)
   }
   return (
     <>
     <Nav/>
-    {/* <button className='LogOutButton' onClick={()=>dispatch(logout())}>Log Out</button> */}
+   
     <InfiniteScroll
           dataLength={user.length}
           next={handleNext}
           hasMore={user.length !== 0}
-          loader={<Loading />}
+          loader={<Loading />}  //will show the skeleton while api call will be made
 
           >
     {

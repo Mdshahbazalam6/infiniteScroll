@@ -6,7 +6,7 @@ import Nav from './Nav';
 import { useNavigate } from 'react-router';
 
 const Login = () => {
-  const[value,setValue]  = useState({
+  const[value,setValue]  = useState({   //will store the email id and password
     email:'',
     password:''
   })
@@ -16,27 +16,27 @@ const handleChange = ( e ) =>{
   
 let inpValue = e.target.value
 let name = e.target.name
-setValue({...value,[name]:inpValue})
+setValue({...value,[name]:inpValue}) // will set the email and password which will be filled
 }
-// console.log(value)
+
 
 const handleSumit =  ( e ) =>{
   e.preventDefault()
 
- if(value.email !== 'foo'){
+ if(value.email !== 'foo'){  //will check that user has filled correct detail or not if user will fill wrong details will alert about that
   alert("Enter Correct Email")
   return
  }else if(value.password !== 'bar'){
   alert("Enter Correct Password")
   return
  }
- dispatch(login())
-//  console.log(value)
+ dispatch(login())  // after checking it will invoke the login function that is defined in redux
+
 navigate('/')
 }
 
 const { loginStatus } = useSelector((store)=>store)
-// console.log(loginStatus)
+
   return (
     <>
     {loginStatus && <Nav />}

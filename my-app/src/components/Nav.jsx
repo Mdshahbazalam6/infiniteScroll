@@ -13,7 +13,7 @@ const Nav = () => {
        <div className="navbarInnerContainer">
        <p onClick={()=>navigate('/')}>Home</p>
         <p onClick={()=>navigate('/login')}>Login</p>
-        <p onClick={()=>{
+        <p onClick={()=>{    //will invoke the logout function in redux to logout from app
           dispatch(logout())
           navigate('/')
         }}>Logout</p>

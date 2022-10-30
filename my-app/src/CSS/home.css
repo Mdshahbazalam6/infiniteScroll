@@ -38,15 +38,16 @@ padding: 0px 2vw;
 .imageBox > img {
     border-radius: 50%;
 }
-.LoadingDiv > img{
-    width:3vw;
+.imagePlaceholder{
+    width:2vw;
     height:30px; 
     border-radius: 50%;
+    background-color: rgb(180, 175, 175);
 }
-.LoadingDiv > div{
+.textPlaceholder{
     width: 4vw;
     height: 30px;
-background-color: rgb(180, 175, 175);
+    background-color: rgb(180, 175, 175);
 }
 .LogOutButton{
  width: 10vw;

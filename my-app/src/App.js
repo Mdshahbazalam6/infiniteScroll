@@ -10,8 +10,8 @@ function App() {
 const { loginStatus } = useSelector((store)=>store)
   return (
 <>
-
-{loginStatus ? <Routes >
+{/*  if user is not registered then it will show only login page and other path will not be accessible */}
+{loginStatus ? <Routes >    
   
   <Route path='/' element={<Home/>}></Route>
   <Route path='/login' element={<Login/>}></Route>

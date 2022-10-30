@@ -17,7 +17,7 @@ export const logout = () =>{
         type:LOGOUT
     }
 }
-export async function getpostData ( dispatch,length ){
+export async function getpostData ( dispatch,length ){  //this function will make the API call and then will call action that is getData
     try {
         let res = await fetch(`https://randomuser.me/api/?results=${length}`)
         let data = await res.json()
