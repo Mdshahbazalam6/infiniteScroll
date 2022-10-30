@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router';
-// import Home from './components/Home';
-// import Login from './components/Login';
-// import Nav from './components/Nav';
+import Home from './components/Home';
+import Login from './components/Login';
+import Nav from './components/Nav';
 
 
 
@@ -11,13 +11,13 @@ const { loginStatus } = useSelector((store)=>store)
   return (
 <>
 
-{/* {loginStatus ? <Routes >
+{loginStatus ? <Routes >
   
   <Route path='/' element={<Home/>}></Route>
   <Route path='/login' element={<Login/>}></Route>
 
-  </Routes>:  <Login />} */}
-  <h1>Hello</h1>
+  </Routes>:  <Login />}
+
 </>
   );
 }

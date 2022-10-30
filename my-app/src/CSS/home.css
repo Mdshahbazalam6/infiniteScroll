@@ -1,0 +1,109 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background-color: rgb(39,41,45);
+}
+.HomeListContainer{
+width: 50vw;
+margin: auto;
+height: 50px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border: 2px solid #cecece;
+margin-top: 5px;
+background-color: whitesmoke;
+padding: 0px 2vw;
+
+}
+.LoadingDiv{
+    width: 50vw;
+    height: 50px;
+    background-color: rgb(101, 96, 96);
+    margin: auto;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 2vw;
+}
+.HomeListContainer:hover {
+    background-color:  rgb(39,41,45);
+    color: white;
+}
+.imageBox > img {
+    border-radius: 50%;
+}
+.LoadingDiv > img{
+    width:3vw;
+    height:30px; 
+    border-radius: 50%;
+}
+.LoadingDiv > div{
+    width: 4vw;
+    height: 30px;
+background-color: rgb(180, 175, 175);
+}
+.LogOutButton{
+ width: 10vw;
+ height: 35px;
+ text-align: center;   
+ margin-left: 85vw;
+ font-weight: bolder;
+ margin-bottom: 10px;
+ margin-top: 10px;
+}
+.LogOutButton:hover {
+    background-color: rgb(39,41,45);
+    color: white;
+}
+@media all and (max-width:320px){
+    .HomeListContainer,.LoadingDiv{
+        width: 90vw;
+        margin: auto;
+    }
+    .LoadingDiv > div {
+        width: 20vw;
+    }
+    .LogOutButton{
+        margin-left: 65vw;
+        width: 30vw;
+        font-size: 4vw;
+    }
+}
+@media all and (min-width:321px) and (max-width:650px){
+    .HomeListContainer,.LoadingDiv{
+        width: 90vw;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .LoadingDiv > div {
+        width: 10vw;
+    }
+    .LogOutButton{
+        margin-left: 75vw;
+        width: 20vw;
+        font-size: 4vw;
+    }
+}
+@media all and (min-width:651px) and (max-width:950px){
+    .HomeListContainer,.LoadingDiv{
+        width: 90vw;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .LoadingDiv > div {
+        width: 7vw;
+    }
+    .LogOutButton{
+        margin-left: 75vw;
+        width: 20vw;
+        font-size: 2vw;
+    }
+}
+
+/* F:\unit7\infinite_scroll\my-app\src */
